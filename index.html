@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Amavi — Laravel &amp; Flutter Developer</title>
 <meta name="description" content="Amavi, full stack developer spesialis Laravel dan Flutter. Membangun aplikasi web dan mobile yang skalabel.">
+<link rel="icon" type="image/svg+xml" href="icon-amavi.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Poppins:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -47,8 +48,9 @@
     display:flex;align-items:center;justify-content:space-between;
     height:68px;
   }
-  .brand{font-size:1.15rem;font-weight:700;letter-spacing:-0.01em;}
+  .brand{font-size:1.15rem;font-weight:700;letter-spacing:-0.01em;display:flex;align-items:center;}
   .brand span{color:var(--laravel);}
+  .brand img{height:28px;width:auto;display:block;}
   .nav-links{display:flex;gap:32px;list-style:none;margin:0;padding:0;font-size:0.95rem;color:var(--slate);}
   .nav-links a{text-decoration:none;transition:color .2s;}
   .nav-links a:hover{color:var(--ink);}
@@ -222,7 +224,7 @@
 
 <nav class="nav">
   <div class="container nav-inner">
-    <span class="brand">amavi<span>.</span></span>
+    <a href="#" class="brand" aria-label="Amavi"><img src="logo-amavi.svg" alt="Amavi"></a>
     <ul class="nav-links">
       <li><a href="#keahlian">Keahlian</a></li>
       <li><a href="#proyek">Proyek</a></li>
