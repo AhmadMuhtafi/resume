@@ -1,273 +1,416 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amavi | Jasa Pembuatan Aplikasi dan Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #2D3748;
-            --secondary: #4A5568;
-            --accent: #4299E1;
-            --light: #F7FAFC;
-            --dark: #1A202C;
-        }
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: var(--primary);
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 60px 0;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
-        }
-        
-        .tagline {
-            display: inline-block;
-            background-color: rgba(255,255,255,0.2);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-        }
-        
-        .btn {
-            display: inline-block;
-            background-color: var(--accent);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        .btn:hover {
-            background-color: #3182CE;
-            transform: translateY(-2px);
-        }
-        
-        .skills {
-            padding: 80px 0;
-            background-color: var(--light);
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-            font-size: 2rem;
-            color: var(--dark);
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .skill-card {
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-        }
-        
-        .skill-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .skill-card h3 {
-            color: var(--accent);
-            margin-top: 0;
-        }
-        
-        .skill-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: var(--accent);
-        }
-        
-        .projects {
-            padding: 80px 0;
-        }
-        
-        .project-card {
-            display: flex;
-            margin-bottom: 50px;
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .project-image {
-            flex: 1;
-            min-height: 300px;
-            background-size: cover;
-            background-position: center;
-        }
-        
-        .project-details {
-            flex: 1;
-            padding: 30px;
-        }
-        
-        .project-details h3 {
-            margin-top: 0;
-            font-size: 1.5rem;
-        }
-        
-        .tech-badge {
-            display: inline-block;
-            background-color: var(--light);
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin-right: 8px;
-            margin-bottom: 8px;
-        }
-        
-        .contact {
-            padding: 80px 0;
-            background-color: var(--light);
-            text-align: center;
-        }
-        
-        footer {
-            background-color: var(--dark);
-            color: white;
-            text-align: center;
-            padding: 30px 0;
-            font-size: 0.9rem;
-        }
-        
-        @media (max-width: 768px) {
-            .project-card {
-                flex-direction: column;
-            }
-            
-            .project-image {
-                min-height: 200px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amavi — Laravel &amp; Flutter Developer</title>
+<meta name="description" content="Amavi, full stack developer spesialis Laravel dan Flutter. Membangun aplikasi web dan mobile yang skalabel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Poppins:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14181F;
+    --paper:#FBFAF8;
+    --paper-alt:#F2F0EA;
+    --line:#E3E0D8;
+    --slate:#5B6472;
+    --slate-light:#8B93A0;
+    --laravel:#FF2D20;
+    --flutter:#0468D7;
+    --radius:10px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Poppins',sans-serif;
+    margin:0;
+    padding:0;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.65;
+    font-weight:400;
+  }
+  h1,h2,h3,.brand{font-family:'Sora',sans-serif;}
+  .mono{font-family:'JetBrains Mono',monospace;}
+  a{color:inherit;}
+  .container{max-width:1160px;margin:0 auto;padding:0 24px;}
+  :focus-visible{outline:2px solid var(--flutter);outline-offset:3px;}
+
+  /* NAV */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(251,250,248,0.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    height:68px;
+  }
+  .brand{font-size:1.15rem;font-weight:700;letter-spacing:-0.01em;}
+  .brand span{color:var(--laravel);}
+  .nav-links{display:flex;gap:32px;list-style:none;margin:0;padding:0;font-size:0.95rem;color:var(--slate);}
+  .nav-links a{text-decoration:none;transition:color .2s;}
+  .nav-links a:hover{color:var(--ink);}
+  .nav-cta{
+    background:var(--ink);color:var(--paper);
+    padding:9px 20px;border-radius:6px;font-size:0.9rem;font-weight:500;
+    text-decoration:none;
+  }
+  .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px;}
+  .nav-toggle span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0;}
+
+  /* HERO */
+  .hero{padding:88px 0 96px;}
+  .hero-grid{
+    display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center;
+  }
+  .eyebrow-row{display:flex;align-items:center;gap:10px;margin-bottom:22px;color:var(--slate);font-size:0.92rem;}
+  .dot-pair{display:flex;gap:4px;}
+  .dot{width:8px;height:8px;border-radius:50%;}
+  .dot.red{background:var(--laravel);}
+  .dot.blue{background:var(--flutter);}
+  .hero h1{
+    font-size:2.7rem;line-height:1.15;margin:0 0 20px;font-weight:700;letter-spacing:-0.015em;
+  }
+  .hero p.lead{
+    font-size:1.08rem;color:var(--slate);max-width:520px;margin:0 0 34px;
+  }
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:13px 26px;border-radius:6px;text-decoration:none;font-weight:500;font-size:0.95rem;
+    transition:transform .15s ease, box-shadow .15s ease;
+    border:1px solid transparent;
+  }
+  .btn-primary{background:var(--ink);color:var(--paper);}
+  .btn-primary:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(20,24,31,0.18);}
+  .btn-outline{background:transparent;color:var(--ink);border-color:var(--line);}
+  .btn-outline:hover{border-color:var(--slate);}
+
+  /* Code window */
+  .code-window{
+    background:var(--ink);border-radius:12px;overflow:hidden;
+    box-shadow:0 24px 48px rgba(20,24,31,0.16);
+  }
+  .code-tabs{
+    display:flex;gap:2px;background:#1D222B;padding:0 10px;
+  }
+  .code-tab{
+    padding:11px 16px;font-size:0.78rem;color:var(--slate-light);
+    border-bottom:2px solid transparent;
+  }
+  .code-tab.active{color:#fff;border-bottom-color:var(--laravel);}
+  .code-body{padding:22px 24px;font-size:0.84rem;color:#C7CDD6;overflow-x:auto;}
+  .code-body .ln{color:#4E5768;margin-right:14px;user-select:none;}
+  .code-body .kw{color:#F97583;}
+  .code-body .fn{color:#79C0FF;}
+  .code-body .str{color:#A5D6A7;}
+  .code-body .cm{color:#6A737D;}
+  .code-body pre{margin:0;white-space:pre;}
+
+  /* Section shell */
+  section{padding:96px 0;}
+  .section-alt{background:var(--paper-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .section-head{max-width:560px;margin-bottom:56px;}
+  .section-head h2{font-size:1.9rem;margin:0 0 12px;font-weight:700;letter-spacing:-0.01em;}
+  .section-head p{color:var(--slate);margin:0;font-size:1.02rem;}
+
+  /* Skills */
+  .skills-row{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    border-top:1px solid var(--line);
+  }
+  .skill-col{
+    padding:32px 28px 0;border-left:1px solid var(--line);
+  }
+  .skill-col:first-child{border-left:none;padding-left:0;}
+  .skill-col:last-child{padding-right:0;}
+  .skill-head{display:flex;align-items:center;gap:9px;margin-bottom:14px;}
+  .skill-head h3{font-size:1.08rem;margin:0;font-weight:600;}
+  .skill-col p{color:var(--slate);font-size:0.95rem;margin:0 0 18px;}
+  .tool-list{display:flex;flex-wrap:wrap;gap:8px;}
+  .tool-pill{
+    font-size:0.78rem;padding:5px 11px;border-radius:5px;
+    background:var(--paper);border:1px solid var(--line);color:var(--slate);
+  }
+  .section-alt .tool-pill{background:var(--paper-alt);}
+
+  /* Projects */
+  .project{
+    display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;
+    padding:44px 0;border-top:1px solid var(--line);
+  }
+  .project:last-child{border-bottom:1px solid var(--line);}
+  .project.reverse .visual{order:2;}
+  .project.reverse .details{order:1;}
+  .visual{
+    aspect-ratio:4/3;border-radius:12px;position:relative;overflow:hidden;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .visual.ecom{background:linear-gradient(160deg,#FFF1EE 0%,#FFE3DC 100%);}
+  .visual.health{background:linear-gradient(160deg,#EAF3FF 0%,#DCEBFF 100%);}
+  .phone{
+    width:118px;height:230px;border-radius:20px;background:var(--ink);padding:8px;
+  }
+  .phone .screen{width:100%;height:100%;border-radius:13px;background:#fff;position:relative;overflow:hidden;}
+  .phone .bar{position:absolute;left:14px;right:14px;height:8px;border-radius:4px;background:var(--line);}
+  .visual.ecom .bar1{top:22px;background:#FFD8CC;}
+  .visual.ecom .bar2{top:38px;width:60%;}
+  .visual.ecom .bar3{top:70px;height:60px;background:#FFE3DC;border-radius:8px;}
+  .visual.health .bar1{top:22px;background:#CFE4FF;}
+  .visual.health .bar2{top:38px;width:60%;}
+  .visual.health .bar3{top:70px;height:60px;background:#DCEBFF;border-radius:8px;}
+  .details h3{font-size:1.35rem;margin:0 0 12px;font-weight:700;}
+  .details p{color:var(--slate);margin:0 0 18px;font-size:0.97rem;}
+  .badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px;}
+  .badge{
+    font-size:0.76rem;padding:5px 10px;border-radius:5px;font-weight:500;
+  }
+  .badge.b-red{background:rgba(255,45,32,0.09);color:#C5230F;}
+  .badge.b-blue{background:rgba(4,104,215,0.09);color:#0450A8;}
+  .badge.b-neutral{background:var(--paper-alt);color:var(--slate);border:1px solid var(--line);}
+  .link-arrow{font-size:0.92rem;font-weight:500;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px;}
+
+  /* Contact */
+  .contact-inner{max-width:640px;}
+  .contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:36px;}
+  .contact-card{
+    display:flex;align-items:center;gap:14px;
+    padding:18px 20px;border:1px solid var(--line);border-radius:10px;
+    background:var(--paper);text-decoration:none;color:var(--ink);
+    transition:border-color .2s, transform .2s;
+  }
+  .contact-card:hover{border-color:var(--slate);transform:translateY(-2px);}
+  .contact-card .icon{
+    width:38px;height:38px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .icon svg{width:18px;height:18px;}
+  .icon.email{background:rgba(255,45,32,0.09);color:var(--laravel);}
+  .icon.wa{background:rgba(37,211,102,0.12);color:#1DAA53;}
+  .icon.gh{background:var(--paper-alt);color:var(--ink);}
+  .icon.li{background:rgba(4,104,215,0.09);color:var(--flutter);}
+  .contact-card .label{font-size:0.7rem;color:var(--slate);display:block;}
+  .contact-card .value{font-size:0.92rem;font-weight:500;}
+
+  footer{
+    border-top:1px solid var(--line);padding:32px 0;
+  }
+  .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+  footer p{margin:0;color:var(--slate-light);font-size:0.85rem;}
+
+  @media (max-width:860px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero{padding:52px 0 64px;}
+    .hero h1{font-size:2.1rem;}
+    .nav-links,.nav-cta{display:none;}
+    .nav-toggle{display:block;}
+    .skills-row{grid-template-columns:1fr;}
+    .skill-col{border-left:none;border-top:1px solid var(--line);padding:28px 0 0;}
+    .skill-col:first-child{border-top:none;}
+    .project,.project.reverse{grid-template-columns:1fr;}
+    .project.reverse .visual,.project.reverse .details{order:0;}
+    .contact-grid{grid-template-columns:1fr;}
+    section{padding:64px 0;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none !important;}
+  }
+</style>
 </head>
 <body>
-    <header>
-        <div class="hero">
-            <span class="tagline">Full Stack Developer</span>
-            <h1>Hi, Saya Amavi</h1>
-            <p>Spesialis Laravel untuk Backend Development dan Flutter untuk Mobile App Development dengan pengalaman membangun aplikasi web dan mobile yang skalabel.</p>
-            <a href="#contact" class="btn">Hubungi Saya</a>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <span class="brand">amavi<span>.</span></span>
+    <ul class="nav-links">
+      <li><a href="#keahlian">Keahlian</a></li>
+      <li><a href="#proyek">Proyek</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+    <a href="#kontak" class="nav-cta">Hubungi Saya</a>
+    <button class="nav-toggle" aria-label="Buka menu" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" style="display:none;">
+  <style>
+    .mobile-menu.open{display:block !important;border-bottom:1px solid var(--line);background:var(--paper);}
+    .mobile-menu ul{list-style:none;margin:0;padding:16px 24px;display:flex;flex-direction:column;gap:14px;}
+    .mobile-menu a{text-decoration:none;color:var(--ink);font-size:0.98rem;}
+  </style>
+  <ul>
+    <li><a href="#keahlian">Keahlian</a></li>
+    <li><a href="#proyek">Proyek</a></li>
+    <li><a href="#kontak">Kontak</a></li>
+  </ul>
+</div>
+
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow-row">
+        <span class="dot-pair"><span class="dot red"></span><span class="dot blue"></span></span>
+        Full Stack Developer — Laravel &amp; Flutter
+      </div>
+      <h1>Hi, saya Amavi.<br>Saya membangun backend dan aplikasi mobile yang saling terhubung rapi.</h1>
+      <p class="lead">Tiga tahun lebih membangun API dengan Laravel dan menghubungkannya ke aplikasi Flutter — dari sistem pembayaran, tracking real-time, hingga fitur chat. Fokus saya: kode yang stabil dan pengalaman pengguna yang cepat.</p>
+      <div class="hero-actions">
+        <a href="#kontak" class="btn btn-primary">Diskusikan Proyek Anda</a>
+        <a href="#proyek" class="btn btn-outline">Lihat Proyek</a>
+      </div>
+    </div>
+    <div class="code-window">
+      <div class="code-tabs">
+        <div class="code-tab active">routes/api.php</div>
+        <div class="code-tab">home_screen.dart</div>
+      </div>
+      <div class="code-body"><pre><span class="ln">1</span><span class="kw">Route</span>::middleware(<span class="str">'auth:sanctum'</span>)
+<span class="ln">2</span>    ->group(<span class="kw">function</span> () {
+<span class="ln">3</span>    <span class="fn">Route::get</span>(<span class="str">'/orders'</span>, [OrderController::class, <span class="str">'index'</span>]);
+<span class="ln">4</span>    <span class="fn">Route::post</span>(<span class="str">'/orders'</span>, [OrderController::class, <span class="str">'store'</span>]);
+<span class="ln">5</span>});
+<span class="ln">6</span>
+<span class="ln">7</span><span class="cm">// terhubung langsung ke Flutter via REST + JWT</span></pre></div>
+    </div>
+  </div>
+</header>
+
+<section id="keahlian">
+  <div class="container">
+    <div class="section-head">
+      <h2>Yang saya kerjakan</h2>
+      <p>Tiga area yang saya kuasai secara mendalam, dari desain API hingga tampilan di layar pengguna.</p>
+    </div>
+    <div class="skills-row">
+      <div class="skill-col">
+        <div class="skill-head">
+          <span class="dot red"></span>
+          <h3>Laravel Development</h3>
         </div>
-    </header>
-    
-    <section class="skills">
-        <div class="container">
-            <h2 class="section-title">Keahlian Saya</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">🛠️</div>
-                    <h3>Laravel Development</h3>
-                    <p>Pengalaman 3+ tahun membangun aplikasi web dengan Laravel, termasuk RESTful API, autentikasi, integrasi payment gateway, dan sistem queue.</p>
-                    <p><strong>Tools:</strong> Laravel, Eloquent, Blade, Livewire, PHPUnit</p>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-icon">📱</div>
-                    <h3>Flutter Development</h3>
-                    <p>Membangun aplikasi mobile cross-platform dengan Flutter yang performanya hampir setara native dengan UI yang menarik.</p>
-                    <p><strong>Tools:</strong> Flutter, Dart, Firebase, BLoC, Provider</p>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-icon">🔗</div>
-                    <h3>API Integration</h3>
-                    <p>Ahli dalam menghubungkan aplikasi mobile Flutter dengan backend Laravel melalui API, termasuk optimasi performa dan keamanan.</p>
-                    <p><strong>Tools:</strong> REST API, JWT Auth, WebSocket, GraphQL</p>
-                </div>
-            </div>
+        <p>Membangun RESTful API, autentikasi, integrasi payment gateway, dan sistem antrian (queue) untuk aplikasi berskala menengah hingga besar.</p>
+        <div class="tool-list">
+          <span class="tool-pill mono">Laravel</span>
+          <span class="tool-pill mono">Eloquent</span>
+          <span class="tool-pill mono">Livewire</span>
+          <span class="tool-pill mono">PHPUnit</span>
         </div>
-    </section>
-    
-    <section class="projects">
-        <div class="container">
-            <h2 class="section-title">Proyek Terbaru</h2>
-            
-            <div class="project-card">
-                <div class="project-image" style="background-image: url('tracking_marketing.jpg');"></div>
-                <div class="project-details">
-                    <h3>Aplikasi Tracking Marketing</h3>
-                    <p>Aplikasi Tracking Marketing lengkap dengan Tracking GPS per input laporan dan sudah menggunakan rest api untuk mengambil dan mengirim data</p>
-                    <div>
-                        <span class="tech-badge">Laravel</span>
-                        <span class="tech-badge">Flutter</span>
-                        <span class="tech-badge">MySQL</span>
-                        <span class="tech-badge">Firebase</span>
-                    </div>
-                    <a href="#" class="btn" style="margin-top: 20px; display: inline-block;">Lihat Detail</a>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <div class="project-image" style="background-image: url('');"></div>
-                <div class="project-details">
-                    <h3>Health Tracker App</h3>
-                    <p>Aplikasi untuk memantau kesehatan dengan fitur reminder obat, tracking olahraga, dan konsultasi dokter via chat. Backend menggunakan Laravel dengan API untuk mobile app Flutter.</p>
-                    <div>
-                        <span class="tech-badge">Laravel</span>
-                        <span class="tech-badge">Flutter</span>
-                        <span class="tech-badge">WebSocket</span>
-                        <span class="tech-badge">Push Notification</span>
-                    </div>
-                    <a href="#" class="btn" style="margin-top: 20px; display: inline-block;">Lihat Detail</a>
-                </div>
-            </div>
+      </div>
+      <div class="skill-col">
+        <div class="skill-head">
+          <span class="dot blue"></span>
+          <h3>Flutter Development</h3>
         </div>
-    </section>
-    
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">Hubungi Saya</h2>
-            <p style="max-width: 600px; margin: 0 auto 30px;">Saya terbuka untuk peluang kerja sama, proyek freelance, atau posisi full-time sebagai Laravel atau Flutter Developer.</p>
-            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                <a href="mailto:afi.hcrc@gmail.com" class="btn">Email Saya</a>
-                <a href="https://wa.me/6285878472693" class="btn" style="background-color: #25D366;">WhatsApp</a>
-                <a href="#" class="btn" style="background-color: var(--dark);">GitHub</a>
-                <a href="#" class="btn" style="background-color: #0A66C2;">LinkedIn</a>
-            </div>
+        <p>Membangun aplikasi mobile cross-platform dengan performa mendekati native dan antarmuka yang ringan digunakan.</p>
+        <div class="tool-list">
+          <span class="tool-pill mono">Flutter</span>
+          <span class="tool-pill mono">Dart</span>
+          <span class="tool-pill mono">BLoC</span>
+          <span class="tool-pill mono">Firebase</span>
         </div>
-    </section>
-    
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 amavi. All rights reserved.</p>
+      </div>
+      <div class="skill-col">
+        <div class="skill-head">
+          <span class="dot-pair"><span class="dot red"></span><span class="dot blue"></span></span>
+          <h3>API Integration</h3>
         </div>
-    </footer>
+        <p>Menghubungkan aplikasi Flutter dengan backend Laravel secara aman dan efisien, termasuk optimasi performa data.</p>
+        <div class="tool-list">
+          <span class="tool-pill mono">REST API</span>
+          <span class="tool-pill mono">JWT</span>
+          <span class="tool-pill mono">WebSocket</span>
+          <span class="tool-pill mono">GraphQL</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="proyek" class="section-alt">
+  <div class="container">
+    <div class="section-head">
+      <h2>Proyek terbaru</h2>
+      <p>Dua proyek yang menunjukkan bagaimana backend Laravel dan aplikasi Flutter bekerja sebagai satu sistem.</p>
+    </div>
+
+    <div class="project">
+      <div class="visual ecom">
+        <div class="phone"><div class="screen">
+          <div class="bar bar1"></div><div class="bar bar2"></div><div class="bar bar3"></div>
+        </div></div>
+      </div>
+      <div class="details">
+        <h3>Aplikasi E-Commerce</h3>
+        <p>Aplikasi belanja lengkap dengan backend Laravel dan mobile app Flutter. Mendukung pembayaran online, tracking pesanan real-time, dan chat langsung dengan penjual.</p>
+        <div class="badges">
+          <span class="badge b-red">Laravel</span>
+          <span class="badge b-blue">Flutter</span>
+          <span class="badge b-neutral">MySQL</span>
+          <span class="badge b-neutral">Firebase</span>
+        </div>
+        <a href="#" class="link-arrow">Lihat detail proyek</a>
+      </div>
+    </div>
+
+    <div class="project reverse">
+      <div class="visual health">
+        <div class="phone"><div class="screen">
+          <div class="bar bar1"></div><div class="bar bar2"></div><div class="bar bar3"></div>
+        </div></div>
+      </div>
+      <div class="details">
+        <h3>Health Tracker App</h3>
+        <p>Aplikasi pemantau kesehatan dengan pengingat obat, tracking olahraga, dan konsultasi dokter via chat. Backend Laravel menyediakan API real-time untuk aplikasi Flutter.</p>
+        <div class="badges">
+          <span class="badge b-red">Laravel</span>
+          <span class="badge b-blue">Flutter</span>
+          <span class="badge b-neutral">WebSocket</span>
+          <span class="badge b-neutral">Push Notification</span>
+        </div>
+        <a href="#" class="link-arrow">Lihat detail proyek</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kontak">
+  <div class="container contact-inner">
+    <div class="section-head" style="margin-bottom:0;">
+      <h2>Mari bekerja sama</h2>
+      <p>Terbuka untuk kerja sama proyek freelance maupun posisi full-time sebagai Laravel atau Flutter Developer.</p>
+    </div>
+    <div class="contact-grid">
+      <a href="mailto:afi.hcrc@gmail.com" class="contact-card">
+        <span class="icon email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6l9 7 9-7M4 4h16v16H4z"/></svg></span>
+        <span><span class="label">Email</span><span class="value">afi.hcrc@gmail.com</span></span>
+      </a>
+      <a href="https://wa.me/6285878472693" class="contact-card">
+        <span class="icon wa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 01-12.35 7.6L3 20l1-5.6A8.5 8.5 0 1121 11.5z"/></svg></span>
+        <span><span class="label">WhatsApp</span><span class="value">+62 858-7847-2693</span></span>
+      </a>
+      <a href="#" class="contact-card">
+        <span class="icon gh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-4 1.5-4-2-6-2m12 4v-3.5c0-1 .1-1.4-.5-2 2.5-.3 5-1.2 5-5.5a4.3 4.3 0 00-1.2-3S17.7 6 14.5 7a12.5 12.5 0 00-5 0C6.3 6 5.7 6 5.7 6a4.3 4.3 0 00-1.2 3c0 4.3 2.5 5.2 5 5.5-.6.6-.6 1.2-.5 2V21"/></svg></span>
+        <span><span class="label">GitHub</span><span class="value">github.com/amavi</span></span>
+      </a>
+      <a href="#" class="contact-card">
+        <span class="icon li"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h4v16H4zM4 4l4 5M11 9h4v11h-4zM11 13c0-2 1.5-4 4-4s4 2 4 4v7h-4v-6c0-1-.5-1.5-1.5-1.5S13 13 13 14v6h-2z"/></svg></span>
+        <span><span class="label">LinkedIn</span><span class="value">linkedin.com/in/amavi</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <p>&copy; <span id="year"></span> Amavi. Seluruh hak cipta dilindungi.</p>
+    <p>Dibangun dengan Laravel &amp; Flutter, ditulis dengan cermat.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
